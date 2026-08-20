@@ -8,6 +8,9 @@ data = pd.read_csv("students.csv")
 data["Gender"] = ["M", "M", "F", "F", "M"]
 print(data)
 
+# customize the size of the figure
+plt.figure(figsize=(15, 5))
+
 # create a count plot that counts the number of the gender 
 sns.countplot(x="Gender", data=data)
 
