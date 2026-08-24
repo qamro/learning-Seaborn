@@ -15,3 +15,10 @@ plt.figure(figsize=(15, 5))
 sns.countplot(x="Gender", data=data)
 
 plt.show()
+
+"""
+here how to customize the count plot to be with two variables:
+sns.countplot(x="Country", hue="Gender", data=data)
+NOTE: hue is used to split your data into groups and give each group a different color 
+NOTE: when we used hue the legend will be shown automatically
+"""
