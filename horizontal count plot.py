@@ -3,6 +3,9 @@ import numpy as np
 import matplotlib.pyplot as plt  
 import seaborn as sns 
 
+# count plot is identical to bar plot but it works only to count variables
+
+
 data = pd.read_csv("students.csv")
 # add new column to our data
 data["Gender"] = ["M", "M", "F", "F", "M"]
