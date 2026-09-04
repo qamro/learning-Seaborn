@@ -7,3 +7,8 @@ import seaborn as sns
 
 # list of all the built-in datasets in seaborn
 print(sns.get_dataset_names())
+print()
+
+# load the "titanic" dataset from seaborn(for example)
+titanic_data = sns.load_dataset("titanic")  
+print(titanic_data.head())  # print the first 5 rows of the dataset
