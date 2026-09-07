@@ -7,7 +7,9 @@ df = pd.read_csv("students_big_data.csv")
 print(df.head()) # show the first 5 rows of the dataset
 
 # create a bar plot to show the average GPA of each department
-sns.barplot(x="Department", y="GPA", data=df) 
+sns.barplot(x="Department", y="GPA",
+            hue="Gender", # split the data into groups based on gender
+            data=df) 
 
 plt.tight_layout()
 plt.show()
