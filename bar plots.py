@@ -10,8 +10,11 @@ print(df.head()) # show the first 5 rows of the dataset
 sns.barplot(x="Department", y="GPA",
             hue="Gender", # split the data into groups based on gender
             data=df,
+            order=["Computer Science", "Physics", "Mathematics", "Biology", "Business"], # order the departments in a specific order
+            hue_order=["Male", "Female"], # order the hue(genders) in a specific order
             ci=None, # remove the confidence interval(the error bars) from the plot
-            color="blue") # change the color of the bars to blue
+            color="blue", # change the color of the bars to blue
+            saturation=0.5) # change the saturation(intensity) of the colors
 
 plt.tight_layout()
 plt.show()
