@@ -2,3 +2,15 @@ import pandas as pd
 import numpy as np 
 import matplotlib.pyplot as plt  
 import seaborn as sns 
+
+df = pd.read_csv("students_big_data.csv")
+print(df.head()) # show the first 5 rows of the dataset
+
+# create a horizontal bar plot to show the average GPA of each department
+# to make the bar plot horizontal we just need to switch the x and y axes
+sns.barplot(x="GPA", y="Department",
+            hue="Gender", # split the data into groups based on gender
+            data=df) 
+
+plt.tight_layout()
+plt.show()
