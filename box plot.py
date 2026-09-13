@@ -21,4 +21,13 @@ Lower Bound = Q1 - 1.5 × IQR
 Upper Bound = Q3 + 1.5 × IQR
 """
 
+df = pd.read_csv("students_big_data.csv")
 
+sns.boxplot(x="Department", y="GPA",
+            hue="Gender", # split the data into groups based on gender
+            data=df,
+            showmeans=True, # show the mean of the data as a point on the box plot
+            meanprops={"marker":"o", "markerfacecolor":"white", "markeredgecolor":"black"})# customize the mean point
+
+plt.tight_layout()
+plt.show()
