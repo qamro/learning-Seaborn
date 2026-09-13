@@ -14,3 +14,11 @@ narrower = lower density (less data around that value)
 KDE creates the smooth shape of the violin plot.
 """
 
+sns.violinplot(x="Department", y="GPA", data=df,
+                hue="Gender", # split the data into groups based on gender
+                split=True, # split the violins into two halves for each gender
+                inner="quartile", # show the quartiles(Q1,median,Q3) inside the violin plot as lines not the default "box" which shows the box plot inside the violin plot
+                linewidth=2) # change the width of the violin lines
+
+plt.tight_layout()
+plt.show()
