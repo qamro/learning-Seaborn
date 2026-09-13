@@ -27,7 +27,8 @@ sns.boxplot(x="Department", y="GPA",
             hue="Gender", # split the data into groups based on gender
             data=df,
             showmeans=True, # show the mean of the data as a point on the box plot
-            meanprops={"marker":"o", "markerfacecolor":"white", "markeredgecolor":"black"})# customize the mean point
+            meanprops={"marker":"o", "markerfacecolor":"white", "markeredgecolor":"black"}, # customize the mean point
+            linewidth=2) # change the width of the box lines
 
 plt.tight_layout()
 plt.show()
