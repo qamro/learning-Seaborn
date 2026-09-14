@@ -22,3 +22,9 @@ jitter=True → add some random dispersion to the data points to avoid overlappi
 jitter=False → no random dispersion, the data points will be plotted on top of each other if they have the same value
 jitter=0.3 → add a precise amount of random dispersion to the data points 
 """
+
+"""
+NOTE:
+u can control the size of the data points using the size parameter for example:
+size=5
+"""
