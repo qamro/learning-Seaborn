@@ -9,7 +9,6 @@ df = pd.read_csv("students_big_data.csv")
 sns.stripplot(x="Department", y="GPA", data=df,
                 jitter=True, # add some random noise to the data points to avoid overlapping
                 linewidth=0.5, # change the width of the data points
-                dodge=True, # separate the data points for each gender
                 alpha=0.8) # change the transparency of the data points
 
 # create a box plot on top of the strip plot
