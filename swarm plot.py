@@ -8,6 +8,7 @@ import seaborn as sns
 df = pd.read_csv("students_big_data.csv")
 
 sns.swarmplot(x="Department", y="GPA", data=df,
+                hue="Gender", # color the data points based on the department
                 size=10, # change the size of the data points
                 alpha=0.8) # change the transparency of the data points 
 
