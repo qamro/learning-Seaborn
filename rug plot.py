@@ -13,7 +13,9 @@ sns.histplot(x="GPA", data=df,
                 bins=np.arange(9, 19, 1), # number of bins to divide the data into
                 kde=True) # show the kernel density estimation curve on top of the histogram
 
-sns.rugplot(data=df, x="GPA", color="black", height=0.05)
+sns.rugplot(data=df, x="GPA",
+            color="black", # set the color of the rug lines to black
+            height=0.05) # set the height of the rug lines to 0.05
 
 
 plt.tight_layout()
