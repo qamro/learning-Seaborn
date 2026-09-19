@@ -12,7 +12,7 @@ sns.pairplot(data=df,
             x_vars=["GPA", "Study_Hours_Per_Week", "Sleep_Hours_Per_Night", "Stress_Level", "Attendance_Percentage"], # select the variables to be plotted on the x-axis
             y_vars=["GPA", "Study_Hours_Per_Week", "Sleep_Hours_Per_Night", "Stress_Level", "Attendance_Percentage"], # select the variables to be plotted on the y-axis
             kind="scatter", # set the type of plot(non-diagonal plots) to be scatter plot(its the default one btw)
-            plot_kws={"color": "red"}, # set the color of the scatter plot points(non-diagonal plots)
+            plot_kws={"color": "red", "s": 10}, # set the color and the size of the scatter plot points(non-diagonal plots)
             diag_kind="hist",# set the type of plot to be histogram for the diagonal plots(its the default one btw)
             diag_kws={"color": "green", "kde": True}) # set the color of the histogram bars(diagonal plots)
 
