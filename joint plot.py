@@ -3,11 +3,23 @@ import numpy as np
 import matplotlib.pyplot as plt  
 import seaborn as sns 
 
-# joint plot is a combination of scatter plot and histogram by default
-# but we can change the kind of the plot to be a regression plot, hexbin plot, or kde plot
+# NOTE: Joint plot shows the relationship between two variables along with their distributions. 
+"""
+joint plot is a combination of scatter plot and histogram or KDE plot by default.
+but we can change the kind of the plot to be a regression plot, hexbin plot.... using the kind parameter.
+like this:
+sns.jointplot(x="GPA", y="Study_Hours_Per_Week", data=df,
+                kind="reg") # change the kind of the plot to be a regression plot instead of the default scatter plot
+"""
 
-# NOTE: It shows the relationship between two variables along with their distributions. 
 
-
+                
 df = pd.read_csv("students_big_data.csv")
 
+sns.jointplot(x="GPA", y="Study_Hours_Per_Week", data=df,
+                joint_kws={"color": "red"}, # change the color of the scatter plot points
+                marginal_kws={"color": "green", "kde": True}, # change the color of the histogram bars
+                marginal_ticks=True) # show the ticks on the marginal axes
+
+plt.tight_layout()
+plt.show()
