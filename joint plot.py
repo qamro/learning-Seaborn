@@ -7,6 +7,7 @@ import seaborn as sns
 """
 joint plot is a combination of scatter plot and histogram or KDE plot by default.
 but we can change the kind of the plot to be a regression plot, hexbin plot.... using the kind parameter.
+by default, the kind parameter is set to "scatter" which means scatter plot.
 like this:
 sns.jointplot(x="GPA", y="Study_Hours_Per_Week", data=df,
                 kind="reg") # change the kind of the plot to be a regression plot instead of the default scatter plot
