@@ -17,3 +17,9 @@ sns.displot(x="GPA", data=df,
 plt.tight_layout()
 plt.show()
 
+"""
+NOTE: u can specify the plot type in displot using kind parameter.
+The default value of kind is hist which means histogram.
+u can create ecdf (Empirical Cumulative Distribution Function) plot using kind="ecdf" and KDE plot using kind="kde".
+and u can also create a rug plot using kind="rug".
+"""
