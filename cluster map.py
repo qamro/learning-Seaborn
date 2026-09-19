@@ -14,4 +14,18 @@ numeric_columns = ['GPA','Assignment_Score','Midterm_Score','Final_Exam_Score','
                     'Graduation_Probability_Percentage']
 
 
-plt.figure(figsize=(12, 8)) # set the figure size to be 12 inches wide and 8 inches tall
+# create a cluster map of the correlation matrix with annotations and a color map
+sns.clustermap(df[numeric_columns].corr(), # set the data to be the correlation matrix of the numeric columns in the dataframe
+                vmin=-1, # set the minimum value of the color map to be -1
+                vmax=1, # set the maximum value of the color map to be 1
+                center=0, # set the center of the color map to be 0
+                annot=True, # show the correlation values on the cluster map
+                fmt=".2f", # set the format of the correlation values to be 2 decimal places
+                annot_kws={"size": 10, "weight": "bold"}, # set the size of the annotation text to be 10 and the weight to be bold
+                linewidths=0.5, # set the width of the lines between the cells to be 0.5
+                linecolor="black", # set the color of the lines between the cells to be black
+                cmap="coolwarm") # set the color map for the cluster map
+
+plt.tight_layout()
+plt.show()
+
