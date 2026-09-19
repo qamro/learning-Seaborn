@@ -6,3 +6,5 @@ import seaborn as sns
 # FacetGrid is a way to create multiple plots 
 # It allows us to create a grid of subplots
 
+df = pd.read_csv("students_big_data.csv")
+
