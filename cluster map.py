@@ -21,7 +21,7 @@ sns.clustermap(df[numeric_columns].corr(), # set the data to be the correlation 
                 center=0, # set the center of the color map to be 0
                 annot=True, # show the correlation values on the cluster map
                 fmt=".2f", # set the format of the correlation values to be 2 decimal places
-                annot_kws={"size": 10, "weight": "bold"}, # set the size of the annotation text to be 10 and the weight to be bold
+                annot_kws={"size": 8, "weight": "bold"}, # set the size of the annotation text to be 8 and the weight to be bold
                 linewidths=0.5, # set the width of the lines between the cells to be 0.5
                 linecolor="black", # set the color of the lines between the cells to be black
                 cmap="coolwarm") # set the color map for the cluster map
@@ -29,3 +29,8 @@ sns.clustermap(df[numeric_columns].corr(), # set the data to be the correlation 
 plt.tight_layout()
 plt.show()
 
+"""
+NOTE:
+u can remove either the hierarchical clustering of the rows or the columns by setting :
+row_cluster=False or col_cluster=False in the sns.clustermap() function
+"""
