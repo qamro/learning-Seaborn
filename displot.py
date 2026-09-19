@@ -11,7 +11,9 @@ sns.displot(x="GPA", data=df,
             col="Gender", # create separate plots for each gender
             bins=np.arange(9, 19, 1), # number of bins to divide the data into
             kde=True, # show the kernel density estimation curve on top of the histogram
-            rug=True) # show the rug plot on the x-axis to indicate the individual data points
+            rug=True, # show the rug plot on the x-axis to indicate the individual data points
+            rug_kws={"height": 0.1}) # set the color and height of the rug lines
 
 plt.tight_layout()
 plt.show()
+
