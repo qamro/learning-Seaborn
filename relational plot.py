@@ -8,3 +8,13 @@ import seaborn as sns
 
 df = pd.read_csv("students_big_data.csv")
 
+sns.relplot(x="Study_Hours_Per_Week", y="GPA", data=df,
+            col="Department", # create a separate plot for each department
+            col_wrap=3, # wrap the plots into 3 columns(distribute the plots into 3 columns)
+            hue="Gender", # split the data into groups based on gender
+            style="Gender", # change the points style based on gender(make the points for male and female different)
+            s=70, # set the size of the scatter plot points
+            palette=["blue", "orange"]) # set the colors for the markers based on gender)
+
+plt.tight_layout()
+plt.show()
