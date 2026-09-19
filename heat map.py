@@ -19,6 +19,9 @@ plt.figure(figsize=(12, 8)) # set the figure size to be 12 inches wide and 8 inc
 
 # show the correlation matrix as a heat map with annotations and a color map
 sns.heatmap(df[numeric_columns].corr(), # set the data to be the correlation matrix of the numeric columns in the dataframe
+            vmin=-1, # set the minimum value of the color map to be -1
+            vmax=1, # set the maximum value of the color map to be 1
+            center=0, # set the center of the color map to be 0
             annot=True, # show the correlation values on the heat map
             fmt=".2f", # set the format of the correlation values to be 2 decimal places
             annot_kws={"size": 10, "weight": "bold"}, # set the size of the annotation text to be 10 and the weight to be bold
